@@ -115,17 +115,17 @@ and \code{path} is not 1:1.
 plol <- projects(as = "lol")
 plol
 
-plol |> lol_select("hits[*].projects[*]")
+plol \%>\% lol_select("hits[*].projects[*]")
 
-plol |>
-   lol_select("hits[*].projects[*]") |>
+plol \%>\%
+   lol_select("hits[*].projects[*]") \%>\%
    lol_filter(n == 44, is_leaf)
 
-plol |>
-    lol_lpull("hits[*].entryId") |>
+plol \%>\%
+    lol_lpull("hits[*].entryId") \%>\%
     head()
 
-plol |> lol_path()
+plol \%>\% lol_path()
 
 projects <- projects(size = 5, as = "lol")     # projects 1-5
 next_projects <- hca_next(projects)            # projects 6-10

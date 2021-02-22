@@ -143,7 +143,7 @@ lol <- function(x = list()) {
 #'     elements of the list-of-lists.
 #'
 #' @examples
-#' plol |> lol_select("hits[*].projects[*]")
+#' plol %>% lol_select("hits[*].projects[*]")
 #'
 #' @export
 lol_select <-
@@ -176,8 +176,8 @@ lol_select <-
 #'     to contain elements consistent with the filter criteria.
 #'
 #' @examples
-#' plol |>
-#'    lol_select("hits[*].projects[*]") |>
+#' plol %>%
+#'    lol_select("hits[*].projects[*]") %>%
 #'    lol_filter(n == 44, is_leaf)
 #'
 #' @export
@@ -229,8 +229,8 @@ lol_lpull <-
 #'     `key`.
 #'
 #' @examples
-#' plol |>
-#'     lol_lpull("hits[*].entryId") |>
+#' plol %>%
+#'     lol_lpull("hits[*].entryId") %>%
 #'     head()
 #'
 #' @export
@@ -247,7 +247,7 @@ lol_pull <-
 #'     through the list-of-lists, without the underlying list-of-list
 #'     data.
 #' @examples
-#' plol |> lol_path()
+#' plol %>% lol_path()
 #'
 #' @export
 lol_path <- function(x) x[["path"]]

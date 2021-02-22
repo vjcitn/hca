@@ -1,6 +1,6 @@
 Package: hca
 Title: Utilities for interacting with the Human Cell Atlas API
-Version: 0.0.12
+Version: 0.0.12-1
 Authors@R:
     c(person(given = "Maya",
            family = "McDaniel",
@@ -14,6 +14,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-5874-8148")
       )
     )
+Depends: magrittr
 Description: This package allows users to query the Human Cell Atlas for data on
     single-cell experiments via its API.
 License: MIT + file LICENSE

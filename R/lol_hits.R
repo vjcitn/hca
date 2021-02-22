@@ -28,8 +28,8 @@ lol_hits_lpull <-
 
     value <- vector("list", length(within_idx))
     value[as.integer(levels(path_idx))] <-
-        lol_lpull(x, path) |>
-        split(path_idx) |>
+        lol_lpull(x, path) %>%
+        split(path_idx) %>%
         lapply(unname)
     value
 }
